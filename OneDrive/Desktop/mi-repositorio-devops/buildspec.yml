@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Iniciando Build...
+  build:
+    commands:
+      - echo Construyendo Docker...
+      - docker build -t flask-app ./app
+  post_build:
+    commands:
+      - echo Build finalizado
+
+artifacts:
+  files:
+    - '**/*'
